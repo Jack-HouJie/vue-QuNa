@@ -1,0 +1,19 @@
+{
+  "name": "vue_qunawang",
+  "version": "1.0.0",
+  "description": "基于vue的仿去哪网",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jack-HouJie/vue_qunawang.git"
+  },
+  "author": "Jack_Houjie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jack-HouJie/vue_qunawang/issues"
+  },
+  "homepage": "https://github.com/Jack-HouJie/vue_qunawang#readme"
+}
