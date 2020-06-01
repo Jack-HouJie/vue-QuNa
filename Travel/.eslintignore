@@ -1,3 +1,4 @@
+# 设置不检测的文件
 /build/
 /config/
 /dist/
