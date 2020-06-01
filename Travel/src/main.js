@@ -9,8 +9,13 @@ import 'styles/border.css'
 import fastClick from 'fastclick'
 // 引入图标样式
 import 'styles/iconfont.css'
+// 引入轮播图插件
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/css/swiper.css'
+
 Vue.config.productionTip = false
 fastClick.attach(document.body)
+Vue.use(VueAwesomeSwiper)
 
 /* eslint-disable no-new */
 new Vue({

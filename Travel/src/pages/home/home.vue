@@ -2,17 +2,20 @@
 <template>
   <div>
     <home-header></home-header>
+    <HmoeSwiper></HmoeSwiper>
   </div>
 </template>
 
 <script>
 // 引入子组件
 import HomeHeader from './components/header'
+import HmoeSwiper from './components/swiper'
 export default {
   name: 'home',
   // 声明局部组件
   components: {
-    HomeHeader
+    HomeHeader,
+    HmoeSwiper
   }
 }
 </script>
