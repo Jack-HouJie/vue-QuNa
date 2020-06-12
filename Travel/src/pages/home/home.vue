@@ -1,8 +1,10 @@
 
 <template>
   <div>
-    <home-header></home-header>
-    <HmoeSwiper></HmoeSwiper>
+    <div>
+      <home-header></home-header>
+      <HmoeSwiper></HmoeSwiper>
+    </div>
   </div>
 </template>
 
