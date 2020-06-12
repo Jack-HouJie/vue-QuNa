@@ -5,6 +5,7 @@
       <!-- 使用子组件 -->
       <home-header></home-header>
       <HmoeSwiper></HmoeSwiper>
+      <HmoeIcons></HmoeIcons>
     </div>
   </div>
 </template>
@@ -13,12 +14,14 @@
 // 引入子组件
 import HomeHeader from './components/header'
 import HmoeSwiper from './components/swiper'
+import HmoeIcons from './components/icons'
 export default {
   name: 'home',
   // 声明局部组件
   components: {
     HomeHeader,
-    HmoeSwiper
+    HmoeSwiper,
+    HmoeIcons
   }
 }
 </script>
