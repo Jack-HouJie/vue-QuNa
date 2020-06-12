@@ -4,7 +4,7 @@
     <div>
       <!-- 使用子组件 -->
       <home-header></home-header>
-      <!-- <HmoeSwiper></HmoeSwiper> -->
+      <HmoeSwiper></HmoeSwiper>
     </div>
   </div>
 </template>

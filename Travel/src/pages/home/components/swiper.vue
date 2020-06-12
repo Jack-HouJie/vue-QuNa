@@ -1,11 +1,14 @@
 <template>
   <div class="wrapper">
     <swiper :options="swiperOptions">
-      <swiper-slide v-for="item of swiperList" :key="item.id">
-        <img clsss="swiper-img" :src="item.imgUrl">
+      <swiper-slide v-for="item of swiperList"
+                    :key="item.id">
+        <img class="swiper-img"
+             :src="item.imgUrl">
       </swiper-slide>
       <div slot="pagination"
-           class="swiper-pagination"></div>
+           class="swiper-pagination">
+      </div>
     </swiper>
   </div>
 </template>
@@ -39,19 +42,16 @@ export default {
 
 <style lang="stylus" scoped>
 .wrapper >>> .swiper-pagination-bullet-active {
-  background: #fff !import;
+  background : #fff;
 }
 
 .wrapper {
-  overflow: hidden;
-  width: 100%;
-  height: 0;
-  padding-bottom: 31%;
-  background: #eee;
+  width : 100%;
+  height: 31.25vw;
+  background-color :#eee;
 }
 
 .swiper-img {
-  position: relative;
-  object-fit: contain;
+  width: 100%;
 }
 </style>
