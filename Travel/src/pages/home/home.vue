@@ -19,6 +19,7 @@ import HmoeSwiper from './components/swiper'
 import HmoeIcons from './components/icons'
 import HomeRecommend from './components/recommend'
 import HomeWeekend from './components/weekend'
+import axios from 'axios'
 export default {
   name: 'home',
   // 声明局部组件
@@ -28,6 +29,17 @@ export default {
     HmoeIcons,
     HomeRecommend,
     HomeWeekend
+  },
+  methods: {
+    getHomeInfo () {
+      axios.get('/api/index.json').then(this.getHomeInfoSucc)
+    },
+    getHomeInfoSucc (res) {
+      console.log(res)
+    }
+  },
+  mounted () {
+    this.getHomeInfo()
   }
 }
 </script>
