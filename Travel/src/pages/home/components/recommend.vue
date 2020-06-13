@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'HmoeRecommend',
+  name: 'HomeRecommend',
   data () {
     return {
       recommendList: [

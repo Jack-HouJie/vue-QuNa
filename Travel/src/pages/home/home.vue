@@ -6,7 +6,8 @@
       <home-header></home-header>
       <HmoeSwiper></HmoeSwiper>
       <HmoeIcons></HmoeIcons>
-      <HmoeRecommend></HmoeRecommend>
+      <HomeRecommend></HomeRecommend>
+      <HomeWeekend></HomeWeekend>
     </div>
   </div>
 </template>
@@ -16,8 +17,8 @@
 import HomeHeader from './components/header'
 import HmoeSwiper from './components/swiper'
 import HmoeIcons from './components/icons'
-import HmoeRecommend from './components/recommend'
-
+import HomeRecommend from './components/recommend'
+import HomeWeekend from './components/weekend'
 export default {
   name: 'home',
   // 声明局部组件
@@ -25,7 +26,8 @@ export default {
     HomeHeader,
     HmoeSwiper,
     HmoeIcons,
-    HmoeRecommend
+    HomeRecommend,
+    HomeWeekend
   }
 }
 </script>
