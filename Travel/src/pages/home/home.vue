@@ -6,6 +6,7 @@
       <home-header></home-header>
       <HmoeSwiper></HmoeSwiper>
       <HmoeIcons></HmoeIcons>
+      <HmoeRecommend></HmoeRecommend>
     </div>
   </div>
 </template>
@@ -15,13 +16,16 @@
 import HomeHeader from './components/header'
 import HmoeSwiper from './components/swiper'
 import HmoeIcons from './components/icons'
+import HmoeRecommend from './components/recommend'
+
 export default {
   name: 'home',
   // 声明局部组件
   components: {
     HomeHeader,
     HmoeSwiper,
-    HmoeIcons
+    HmoeIcons,
+    HmoeRecommend
   }
 }
 </script>

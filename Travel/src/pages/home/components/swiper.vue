@@ -41,17 +41,13 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.wrapper >>> .swiper-pagination-bullet-active {
-  background : #fff;
-}
-
-.wrapper {
-  width : 100%;
-  height: 31.25vw;
-  background-color :#eee;
-}
-
-.swiper-img {
-  width: 100%;
-}
+@import '~styles/varibles.styl'
+.wrapper >>> .swiper-pagination-bullet-active
+  background #fff
+.wrapper
+  width 100%
+  height 31.25vw
+  background-color #eee
+.swiper-img
+  width 100%
 </style>
