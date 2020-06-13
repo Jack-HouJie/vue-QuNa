@@ -3,7 +3,7 @@
     <div class="recommend-title">热销推荐</div>
     <ul>
       <li class="item border-bottom"
-          v-for="item of recommendList"
+          v-for="item of list"
           :key="item.id">
         <div class="item-img-wrapper">
           <img :src="item.imgUrl"
@@ -22,32 +22,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          title: '上海迪士尼乐园热卖套餐1',
-          desc: '重逢上海迪士尼乐园八折起!重逢上海迪士尼乐园八折起!',
-          imgUrl:
-            'https://imgs.qunarzz.com/vs_ceph_b2c_001/5e51283d-0d0f-4a4c-b261-dc89766df84d.jpg_168x160_ea8c5983.jpg'
-        },
-        {
-          id: '0002',
-          title: '上海迪士尼乐园热卖套餐2',
-          desc: '重逢上海迪士尼乐园八折起!重逢上海迪士尼乐园八折起!',
-          imgUrl:
-            'https://imgs.qunarzz.com/vs_ceph_b2c_001/5e51283d-0d0f-4a4c-b261-dc89766df84d.jpg_168x160_ea8c5983.jpg'
-        },
-        {
-          id: '0003',
-          title: '上海迪士尼乐园热卖套餐3',
-          desc: '重逢上海迪士尼乐园八折起!重逢上海迪士尼乐园八折起!',
-          imgUrl:
-            'https://imgs.qunarzz.com/vs_ceph_b2c_001/5e51283d-0d0f-4a4c-b261-dc89766df84d.jpg_168x160_ea8c5983.jpg'
-        }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>

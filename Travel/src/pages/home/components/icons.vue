@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper>
+    <swiper :options="swiperOptions">
       <swiper-slide v-for="(page,index) of pages"
                     :key="index">
         <div class="icon"
@@ -20,62 +20,20 @@
 <script>
 export default {
   name: 'HomeIcons',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      iconList: [
-        {
-          id: '0001',
-          imgUrl: 'https://s.qunarzz.com/homenode/images/touchheader/hotel.png',
-          desc: '酒店酒店酒店酒店酒店酒店'
-        },
-        {
-          id: '0002',
-          imgUrl:
-            'https://s.qunarzz.com/homenode/images/touchheader/flight.png',
-          desc: '机票'
-        },
-        {
-          id: '0003',
-          imgUrl: 'https://s.qunarzz.com/homenode/images/touchheader/hotel.png',
-          desc: '酒店'
-        },
-        {
-          id: '0004',
-          imgUrl: 'https://s.qunarzz.com/homenode/images/touchheader/hotel.png',
-          desc: '酒店'
-        },
-        {
-          id: '0005',
-          imgUrl: 'https://s.qunarzz.com/homenode/images/touchheader/hotel.png',
-          desc: '酒店'
-        },
-        {
-          id: '0006',
-          imgUrl: 'https://s.qunarzz.com/homenode/images/touchheader/hotel.png',
-          desc: '酒店'
-        },
-        {
-          id: '0007',
-          imgUrl: 'https://s.qunarzz.com/homenode/images/touchheader/hotel.png',
-          desc: '酒店'
-        },
-        {
-          id: '0008',
-          imgUrl: 'https://s.qunarzz.com/homenode/images/touchheader/hotel.png',
-          desc: '酒店'
-        },
-        {
-          id: '0009',
-          imgUrl: 'https://s.qunarzz.com/homenode/images/touchheader/hotel.png',
-          desc: '酒店9'
-        }
-      ]
+      swiperOptions: {
+        autoplay: false
+      }
     }
   },
   computed: {
     pages () {
       const pages = []
-      this.iconList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []

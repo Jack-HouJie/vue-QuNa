@@ -3,15 +3,14 @@
   <div>
     <div>
       <!-- 使用子组件 -->
-      <home-header></home-header>
-      <HmoeSwiper></HmoeSwiper>
-      <HmoeIcons></HmoeIcons>
-      <HomeRecommend></HomeRecommend>
-      <HomeWeekend></HomeWeekend>
+      <home-header :city="city"></home-header>
+      <HmoeSwiper :list="swiperList"></HmoeSwiper>
+      <HmoeIcons :list="iconList"></HmoeIcons>
+      <HomeRecommend :list="recommendList"></HomeRecommend>
+      <HomeWeekend :list="weekendList"></HomeWeekend>
     </div>
   </div>
 </template>
-
 <script>
 // 引入子组件
 import HomeHeader from './components/header'
@@ -30,12 +29,29 @@ export default {
     HomeRecommend,
     HomeWeekend
   },
+  data () {
+    return {
+      city: '',
+      swiperList: [],
+      iconList: [],
+      recommendList: [],
+      weekendList: []
+    }
+  },
   methods: {
     getHomeInfo () {
       axios.get('/api/index.json').then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc (res) {
-      console.log(res)
+      res = res.data
+      if (res.ret && res.data) {
+        const data = res.data
+        this.city = data.city
+        this.swiperList = data.swiperList
+        this.iconList = data.iconList
+        this.recommendList = data.recommendList
+        this.weekendList = data.weekendList
+      }
     }
   },
   mounted () {
