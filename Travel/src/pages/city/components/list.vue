@@ -1,69 +1,75 @@
 <template>
-  <div class="list">
-    <div class="area">
-      <div class="title border-topbottom">当前城市</div>
-      <div class="button-list">
-        <div class="button-wrapper">
-          <div class="button">北京</div>
+  <div class="list" ref="wrapper">
+    <div>
+      <div class="area">
+        <div class="title border-topbottom">当前城市</div>
+        <div class="button-list">
+          <div class="button-wrapper">
+            <div class="button">北京</div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="area">
-      <div class="title border-topbottom">热门城市</div>
-      <div class="button-list">
-        <div class="button-wrapper">
-          <div class="button">北京</div>
-        </div>
-        <div class="button-wrapper">
-          <div class="button">北京</div>
-        </div>
-        <div class="button-wrapper">
-          <div class="button">北京</div>
-        </div>
-        <div class="button-wrapper">
-          <div class="button">北京</div>
-        </div>
-        <div class="button-wrapper">
-          <div class="button">北京</div>
-        </div>
-        <div class="button-wrapper">
-          <div class="button">北京</div>
+      <div class="area">
+        <div class="title border-topbottom">热门城市</div>
+        <div class="button-list">
+          <div class="button-wrapper">
+            <div class="button">北京</div>
+          </div>
+          <div class="button-wrapper">
+            <div class="button">北京</div>
+          </div>
+          <div class="button-wrapper">
+            <div class="button">北京</div>
+          </div>
+          <div class="button-wrapper">
+            <div class="button">北京</div>
+          </div>
+          <div class="button-wrapper">
+            <div class="button">北京</div>
+          </div>
+          <div class="button-wrapper">
+            <div class="button">北京</div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="area">
-      <div class="title border-topbottom">A</div>
-      <div class="city-item-list">
-        <div class="item border-bottom">阿拉尔</div>
-        <div class="item border-bottom">阿拉尔</div>
-        <div class="item border-bottom">阿拉尔</div>
-        <div class="item border-bottom">阿拉尔</div>
+      <div class="area">
+        <div class="title border-topbottom">A</div>
+        <div class="city-item-list">
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+        </div>
       </div>
-    </div>
-    <div class="area">
-      <div class="title border-topbottom">B</div>
-      <div class="city-item-list">
-        <div class="item border-bottom">阿拉尔</div>
-        <div class="item border-bottom">阿拉尔</div>
-        <div class="item border-bottom">阿拉尔</div>
-        <div class="item border-bottom">阿拉尔</div>
+      <div class="area">
+        <div class="title border-topbottom">B</div>
+        <div class="city-item-list">
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+        </div>
       </div>
-    </div>
-    <div class="area">
-      <div class="title border-topbottom">C</div>
-      <div class="city-item-list">
-        <div class="item border-bottom">阿拉尔</div>
-        <div class="item border-bottom">阿拉尔</div>
-        <div class="item border-bottom">阿拉尔</div>
-        <div class="item border-bottom">阿拉尔</div>
+      <div class="area">
+        <div class="title border-topbottom">C</div>
+        <div class="city-item-list">
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+          <div class="item border-bottom">阿拉尔</div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Bscroll from 'better-scroll'
 export default {
-  name: 'CityList'
+  name: 'CityList',
+  mounted () {
+    this.scroll = new Bscroll(this.$refs.wrapper)
+  }
 }
 </script>
 
@@ -85,7 +91,7 @@ export default {
   bottom 0
   left 0
   .title
-    line-height 0.44rem
+    line-height 0.54rem
     font-size 0.26rem
     background #eee
     padding-left 0.2rem
