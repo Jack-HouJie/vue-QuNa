@@ -29,8 +29,14 @@ export default {
   },
   data () {
     return {
-      touchStatus: false
+      touchStatus: false,
+      startY: 0,
+      timer: null
     }
+  },
+  updated () {
+    // offsetTop 拿到一个元素距离顶部高度
+    this.startY = this.$refs['A'][0].offsetTop
   },
   methods: {
     handleLetterClick (event) {
@@ -41,18 +47,21 @@ export default {
     },
     handleTouchMove (event) {
       if (this.touchStatus) {
-        // 定位当前手指位置
-        // offsetTop 拿到一个元素距离顶部高度
-        const startY = this.$refs['A'][0].offsetTop
-        // event.touches[0]保存手指信息
-        const touchY = event.touches[0].clientY - 79
-        const index = Math.floor((touchY - startY) / 20)
-        // 传出移动结束处手指所处字母下标
-        if (index >= 0 && index < this.letters.length) {
-          this.$emit('change', this.letters[index])
+        // 节流
+        if (this.timer) {
+          clearTimeout(this.timer)
         }
+        this.timer = setTimeout(() => {
+          // 定位当前手指位置
+          // event.touches[0]保存手指信息
+          const touchY = event.touches[0].clientY - 79
+          const index = Math.floor((touchY - this.startY) / 20)
+          // 传出移动结束处手指所处字母下标
+          if (index >= 0 && index < this.letters.length) {
+            this.$emit('change', this.letters[index])
+          }
+        }, 10)
       }
-      return 0
     },
     handleTouchEnd () {
       this.touchStatus = false
