@@ -13,7 +13,8 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/css/swiper.css'
 // 引入vuex
 import store from './store'
-
+// 引入babel-polyfill
+import 'babel-polyfill'
 Vue.config.productionTip = false
 fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
