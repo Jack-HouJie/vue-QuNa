@@ -30,8 +30,8 @@ export default {
 @import '~styles/varibles.styl'
 .header
   display flex
-  line-height $headerHeight
   background $bgColor
+  line-height $headerHeight
   color #fff
   .header-left
     float left
@@ -51,11 +51,11 @@ export default {
     color #ccc
   .header-right
     float right
-    min-width 1.04rem
     padding: 0 .1rem
+    min-width 1.04rem
     text-align center
     color #fff
     .arrow-icon
-      font-size 0.24rem
       margin-left -0.04rem
+      font-size 0.24rem
 </style>
