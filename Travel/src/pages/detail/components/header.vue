@@ -24,7 +24,7 @@ export default {
     return {
       showAbs: true,
       opacityStyle: {
-        obacity: 0
+        opacity: 0
       }
     }
   },
