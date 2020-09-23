@@ -29,7 +29,7 @@ export default {
   },
   data () {
     return {
-      touchStatus: false,
+      touchStatus: false, // 滑动状态
       startY: 0,
       timer: null
     }
@@ -60,7 +60,7 @@ export default {
           if (index >= 0 && index < this.letters.length) {
             this.$emit('change', this.letters[index])
           }
-        }, 10)
+        }, 50)
       }
     },
     handleTouchEnd () {
