@@ -31,7 +31,7 @@ export default {
     return {
       touchStatus: false, // 滑动状态
       startY: 0,
-      timer: null
+      timer: null // 防抖定时器
     }
   },
   updated () {
@@ -47,7 +47,7 @@ export default {
     },
     handleTouchMove (event) {
       if (this.touchStatus) {
-        // 节流
+        // 防抖
         if (this.timer) {
           clearTimeout(this.timer)
         }

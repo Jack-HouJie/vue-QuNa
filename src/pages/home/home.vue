@@ -4,8 +4,8 @@
     <div>
       <!-- 使用子组件 -->
       <home-header></home-header>
-      <HmoeSwiper :list="swiperList"></HmoeSwiper>
-      <HmoeIcons :list="iconList"></HmoeIcons>
+      <hmoe-swiper :list="swiperList"></hmoe-swiper>
+      <home-icons :list="iconList"></home-icons>
       <HomeRecommend :list="recommendList"></HomeRecommend>
       <HomeWeekend :list="weekendList"></HomeWeekend>
     </div>
@@ -15,7 +15,7 @@
 // 引入子组件
 import HomeHeader from './components/header'
 import HmoeSwiper from './components/swiper'
-import HmoeIcons from './components/icons'
+import HomeIcons from './components/icons'
 import HomeRecommend from './components/recommend'
 import HomeWeekend from './components/weekend'
 import axios from 'axios'
@@ -26,7 +26,7 @@ export default {
   components: {
     HomeHeader,
     HmoeSwiper,
-    HmoeIcons,
+    HomeIcons,
     HomeRecommend,
     HomeWeekend
   },
