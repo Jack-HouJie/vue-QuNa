@@ -33,7 +33,7 @@ export default {
     return {
       keyword: '',
       list: [],
-      timer: null
+      timer: null // 防抖定时器
     }
   },
   methods: {
@@ -50,7 +50,7 @@ export default {
   },
   watch: {
     keyword () {
-      // 节流
+      // 防抖
       if (this.timer) {
         clearTimeout(this.time)
       }
